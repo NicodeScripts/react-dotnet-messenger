@@ -1,0 +1,62 @@
+.settings-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 0 10px; /* Optional: Add some padding to adjust spacing */
+}
+
+.option-label {
+  font-size: 16px; /* Adjust font size if needed */
+  color: var(--text-primary);
+  margin-right: 20px; /* Space between the label and the slider */
+}
+.option-title {
+  color: var(--text-neutral);
+}
+
+.slider-container {
+  position: relative;
+}
+
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 60px; /* Adjusted width for smaller sliders */
+  height: 30px; /* Adjusted height for smaller sliders */
+  background: var(--gray);
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: '';
+  position: absolute;
+  top: 3px; /* Adjust top for the slider button */
+  left: 3px;
+  width: 24px; /* Adjust size of slider button */
+  height: 24px;
+  background: var(--white);
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: var(--lime);
+}
+
+input:checked + label:after {
+  left: calc(100% - 3px); /* Move slider to the right when checked */
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 30px; /* Optional: Adjust slider button size when active */
+}

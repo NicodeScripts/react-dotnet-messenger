@@ -1,0 +1,131 @@
+:root {
+  /* Background Colors */
+  --background1: #f0f2f5;
+  --background2: #f0f0f0;
+  --background3: #eeeeee;
+  --background4: #dfe6e9;
+  --background5: #e0e0e0;
+  --background6: #c3c3c3;
+  --background-black: #2d2d2d;
+  --background-accent: #86c1fb;
+  --background-hover: #e0e0e0;
+  --background-hover-black: #1a1a1a;
+
+  /* Border Colors */
+  --border1: #888;
+  --border2: #ccc;
+  --border3: #ddd;
+  --border-accent: #007bff;
+
+  /* Text Colors */
+  --text-primary: #007bff;
+  --text-secondary: #0167d4;
+  --text-neutral: #666;
+  --text-muted: #999;
+  --text-accent: #575252;
+  --text-accent-alpha: #575252af;
+
+  /* Message Colors */
+  --message-my: #40cbebad;
+  --message-other: #cdcdcd;
+
+  /* Utility */
+  --white: #fff;
+  --gray: rgb(128, 128, 128);
+  --red: #FF0000;
+  --lime: #bada55;
+
+  /* Icons */
+  --dark-icon: #333;
+}
+
+[data-theme="dark"] {
+  /* Background Colors */
+  --background1: #121212; /* Primary dark background */
+  --background2: #1e1e1e; /* Slightly lighter dark background */
+  --background3: #242424; /* Neutral dark gray */
+  --background4: #2c2c2c; /* Softer dark background */
+  --background5: #3a3a3a; /* Medium dark gray */
+  --background6: #444444;
+  --background-black: #000; /* Pure black */
+  --background-accent: #3b82f6; /* Vibrant blue accent */
+  --background-hover: #333333; /* Hover effect color */
+  --background-hover-black: #555555;
+
+  /* Border Colors */
+  --border1: #555; /* Subtle dark borders */
+  --border2: #666; /* Light border for dark mode */
+  --border3: #777; /* Medium border */
+  --border-accent: #1e90ff; /* Bright blue for highlights */
+
+  /* Text Colors */
+  --text-primary: #1e90ff; /* Bright blue for text */
+  --text-secondary: #63a4ff; /* Softer blue for secondary text */
+  --text-neutral: #bdbdbd; /* Neutral gray for text */
+  --text-muted: #a6a6a6; /* Lighter gray text */
+  --text-accent: #e0e0e0; /* Light gray text */
+  --text-accent-alpha: #e0e0e0af; /* Semi-transparent version */
+
+  /* Message Colors */
+  --message-my: #1e90ffaa; /* Vibrant blue for user messages */
+  --message-other: #555; /* Subtle gray for other messages */
+
+  /* Utility */
+  --white: #f5f5f5; /* Off-white for text or backgrounds */
+  --gray: #8c8c8c; /* Neutral gray for dark mode */
+  --red: #ff4c4c; /* Brighter red */
+  --lime: #88cc33; /* Softer green for dark mode */
+
+  /* Icons */
+  --dark-icon: #f5f5f5; /* Light color for icons in dark mode */
+}
+
+
+.content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  background-color: var(--background1); /* Use the root variable for background color */
+}
+
+.chat-components {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  position: relative; 
+  z-index: 1;
+  background-color: var(--background2); /* Set a secondary background color */
+}
+
+.contacts-div {
+  flex: 0 0 27%;
+  position: relative;
+  z-index: 3;
+  background-color: var(--background3); /* Apply another background for contacts */
+}
+
+.chatroom-div {
+  flex: 0 0 90%;
+  position: relative;
+  z-index: 1;
+  background-color: var(--background4); /* Chatroom-specific background */
+}
+
+/* Dark Mode Styling */
+[data-theme="dark"] .content {
+  background-color: var(--background1); /* Dark mode background1 */
+}
+
+[data-theme="dark"] .chat-components {
+  background-color: var(--background2); /* Dark mode background2 */
+}
+
+[data-theme="dark"] .contacts-div {
+  background-color: var(--background3); /* Dark mode background for contacts */
+}
+
+[data-theme="dark"] .chatroom-div {
+  background-color: var(--background4); /* Dark mode background for chatroom */
+}

@@ -1,0 +1,105 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%; /* Ensure the container takes full width */
+  height: 100%; /* Ensure the container takes full height */
+}
+
+.login-form {
+  background-color: var(--white);
+  padding: 30px; /* Increased padding for larger container */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 350px; /* Increased width for larger container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px; /* Spacing between inputs */
+  border-radius: 20px; /* Rounded look for inputs */
+  border: 1px solid var(--border2);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle inner shadow for depth */
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px; /* Rounded look for button */
+  border: none;
+  background-color: #2d2d2d; /* Flagged: No direct match */
+  color: var(--white); /* White text for button */
+  cursor: pointer;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.login-form button:hover {
+  background-color: #1a1a1a; /* Flagged: No direct match */
+}
+
+.register-text {
+  margin-right: auto;
+  margin-left: 5%;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.register-text:hover {
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.error-message {
+  color: red; /* Flagged: No direct match */
+  position: relative;
+  top: 5%;
+}
+
+.password-container {
+  position: relative;
+  width: 106%; /* Full width as the input field */
+  display: flex;
+}
+
+.password-container input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 45px; /* Reserve space for the icon */
+  margin-bottom: 15px;
+  border-radius: 20px;
+  border: 1px solid var(--border2);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+}
+
+.icon-container {
+  position: absolute;
+  top: 41%;
+  right: 15px; /* Position the icon on the right */
+  transform: translateY(-50%); /* Center the icon vertically */
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.icon-container:hover {
+  color: var(--dark-icon);
+}
+
+.below-login {
+  padding: 15px;
+  color: var(--text-primary);
+  align-items: center;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+  color: var(--text-secondary);
+  cursor: pointer;
+}

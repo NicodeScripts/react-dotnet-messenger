@@ -1,0 +1,52 @@
+.message-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+/* General message container styling */
+.message-container {
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 55%;
+  word-wrap: break-word;
+  position: relative;
+}
+
+/* Align the entire message to the right for the current user */
+.my-message-wrapper {
+  align-items: flex-end; 
+  margin-right: 20%;
+}
+
+.other-message-wrapper {
+  align-items: flex-start; 
+}
+
+.my-message {
+  background-color: var(--message-my);
+  text-align: left; 
+}
+
+/* Style for messages sent by others */
+.other-message {
+  background-color: var(--message-other);
+  text-align: left; /* Left-aligned text */
+}
+
+/* Timestamp styling */
+.message-timestamp {
+  font-size: 0.7em;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+/* Align timestamp to the right for current user's messages */
+.timestamp-right {
+  text-align: right;
+}
+
+/* Align timestamp to the left for other users' messages */
+.timestamp-left {
+  text-align: left;
+}

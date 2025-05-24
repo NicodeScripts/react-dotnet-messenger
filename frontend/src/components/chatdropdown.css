@@ -1,0 +1,173 @@
+.chat-dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style for the clickable area that toggles the dropdown */
+.chat-icon-div {
+  width: 40px;
+  height: 40px;
+  padding-bottom: 7px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-dropdown-icon {
+  font-size: 24px;
+  color: var(--text-primary);
+  pointer-events: none;
+  margin-left: 10px;
+}
+
+.chat-dropdown-icon:hover {
+  color: var(--text-secondary);
+}
+
+.chat-dropdown-menu {
+  position: absolute;
+  background-color: var(--white);
+  border: 1px solid var(--border3);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 300px;
+  max-width: 500px;
+  max-height: 500px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  overflow-y: scroll;
+  pointer-events: none;
+}
+
+/* When the dropdown is open */
+.chat-dropdown-menu.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Smooth visibility transition */
+.chat-dropdown-menu.close {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+}
+
+.chat-dropdown-title {
+  padding: 10px;
+  font-weight: bold;
+  background-color: var(--background2);
+  border-bottom: 1px solid var(--border3);
+  color: var(--text-accent);
+  font-size: 1.3rem;
+}
+
+.chat-dropdown-search {
+  width: 86%;
+  padding: 8px;
+  border: 1px solid var(--border3);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 7%;
+  margin-bottom: 5px;
+}
+
+/* List for conversations */
+.conversation-list {
+  position: relative;
+  z-index: 1;
+}
+
+/* Style for each contact item */
+.chat-contact-item {
+  position: relative;
+  padding: 0;
+}
+
+/* Invisible container for user options menu */
+.user-options-container {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 10001;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* User options menu (submenu) */
+.user-options-menu {
+  position: absolute;
+  top: 0;
+  background-color: var(--background2);
+  border: 1px solid var(--border3);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  z-index: 10001;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  width: 150px; /* Fixed width */
+}
+
+/* Show the submenu when active */
+.chat-contact-item.active .user-options-menu {
+  opacity: 1;
+  transform: translateX(0); /* Slide into view */
+  pointer-events: auto; /* Enable interactions */
+}
+
+/* Submenu arrow (triangle) */
+.user-options-menu::before {
+  content: "";
+  position: absolute;
+  left: -10px; /* Position the triangle to the left of the submenu */
+  top: 10px; /* Center the triangle vertically */
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent var(--background2) transparent transparent; /* Triangle pointing to the menu */
+}
+
+/* Style for each user option */
+.user-option {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border3);
+}
+
+/* Remove border from the last option */
+.user-option:last-child {
+  border-bottom: none;
+}
+
+/* Hover effect for user options */
+.user-option:hover {
+  background-color: var(--background5);
+}
+
+::-webkit-scrollbar-track
+{
+	border: 5px solid var(--white);
+	border-color: transparent;
+	background-color: #b2bec3;
+}
+
+::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #dfe6e9;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #86c1fb;
+	border-radius: 10px;
+}

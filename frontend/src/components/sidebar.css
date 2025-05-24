@@ -1,0 +1,104 @@
+:root {
+  --background: var(--background6);
+  --icon-size: 24px;
+  --sidebar-width: 60px;
+  --button-size: 50px;
+  --icon-color: var(--text-neutral);
+  --hover-color: var(--background-hover);
+  --selected-color: var(--dark-icon);
+}
+
+.sidebar-container {
+  background-color: var(--background);
+  height: 100%;
+  width: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.menu-button {
+  margin-top: 5px;
+  width: 25px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-button:hover {
+  background-color: var(--hover-color);
+}
+
+.buttons-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.sidebar-button {
+  width: var(--button-size);
+  height: var(--button-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background);
+  border-radius: 10px;
+  margin: 5px 0;
+  transition: background-color 0.3s;
+}
+
+.sidebar-button:hover {
+  background-color: var(--hover-color);
+}
+
+.icon {
+  font-size: var(--icon-size);
+  color: var(--icon-color);
+}
+
+.selected .icon {
+  color: var(--selected-color);
+}
+
+.profile-widget {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid transparent;
+  margin-right: 15px;
+}
+.profile-image:hover {
+  filter: brightness(0.90);
+}
+
+.settings-button {
+  position: absolute;
+  bottom: 70px;
+  width: var(--button-size);
+  height: var(--button-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background);
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.settings-button:hover {
+  background-color: var(--hover-color);
+}

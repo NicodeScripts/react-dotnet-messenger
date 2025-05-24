@@ -1,0 +1,103 @@
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.register-form {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  border: 1px solid var(--border2);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.register-form button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--background-black);
+  color: var(--white);
+  cursor: pointer;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.register-form button:hover {
+  background-color: var(--background-hover-black)
+}
+/* Container for the password input and the eye icon */
+.password-container {
+  position: relative;
+  width: 105%;
+  display: flex;
+}
+
+.password-container input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 45px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  border: 1px solid var(--border2);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.icon-container {
+  position: absolute;
+  top: 41%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.icon-container:hover {
+  color: var(--dark-icon);
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  font-size: 18px;
+  color: var(--white);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.below-login {
+  padding: 15px;
+  color: var(--text-primary);
+  align-items: center;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.error-message {
+  color: var(--red);
+  margin-top: 10px;
+}

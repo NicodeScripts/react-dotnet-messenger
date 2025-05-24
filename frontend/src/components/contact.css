@@ -1,0 +1,120 @@
+.contact-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative; /* Ensure proper positioning of menu */
+  color: var(--text-neutral)
+}
+
+/* Default hover effect for contact items */
+.contact-item:hover {
+  background-color: var(--background-hover);
+}
+
+/* Selected state for contact items */
+.contact-item.selected {
+  background-color: var(--background-hover);
+  border-left: 4px solid var(--border-accent);
+}
+
+/* Avatar styles */
+.contact-avatar {
+  margin-right: 10px;
+}
+
+.contact-avatar-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  object-fit: cover;
+}
+
+.contact-item.selected .contact-avatar-img {
+  border-color: var(--border-accent);
+}
+
+/* Contact info styles */
+.contact-info {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.contact-name {
+  margin: 0;
+  font-weight: bold;
+}
+
+.contact-preview-text {
+  margin: 0;
+  color: var(--text-neutral);
+}
+
+/* Styles for small contact items */
+.contact-item.small {
+  padding: 5px;
+}
+
+.contact-avatar-img.small {
+  width: 30px;
+  height: 30px;
+}
+
+.contact-name.small {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.contact-menu {
+  position: absolute;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 10001;
+  width: 150px;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.contact-menu.show {
+  opacity: 1;
+  transform: translateX(0); 
+}
+
+.contact-menu.hide {
+  opacity: 0; 
+  transform: translateX(-10px);
+}
+
+.contact-menu-option {
+  padding: 8px 10px;
+  cursor: pointer;
+  background-color: var(--white);
+  border: none;
+  text-align: left;
+}
+
+.contact-menu-header {
+  height: 1px;
+  background-color: var(--background2);
+}
+
+.contact-menu-option:hover {
+  background-color: var(--background-hover);
+}
+
+.contact-menu-option:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.contact-menu-option:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}

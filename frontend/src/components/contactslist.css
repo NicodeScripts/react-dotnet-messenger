@@ -1,0 +1,75 @@
+.contacts-container {
+  background-color: var(--background1);
+  height: 100%;
+  overflow: visible;
+  padding: 15px;
+  border-right: 1px solid var(--border1);
+  position: relative;
+  z-index: 2;
+}
+
+.chat-title {
+  font-size: 2rem;
+  position: relative; /* Add this */
+  color: var(--text-neutral);
+}
+
+/* Add this new class */
+.dropdown-wrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.search-container {
+  width: 80%;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: var(--background3);
+}
+
+.conversation-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.conversation-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border2);
+}
+
+.conversation-item:hover {
+  background-color: var(--background2);
+}
+
+.conversation-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--background3); /* Matches light gray */
+  margin-right: 10px;
+}
+
+.conversation-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.conversation-name {
+  font-weight: bold;
+}
+
+.conversation-preview {
+  color: var(--text-muted);
+}
+
+.top-container {
+  position: relative;
+  z-index: 3;
+}
